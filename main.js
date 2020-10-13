@@ -1,22 +1,19 @@
-var age = prompt ('Quanti anni hai?');
-console.log(age);
+var age = prompt ('Inserisci la tua età');
+document.getElementById('age').innerHTML = age;
 
-var distance = prompt ('Quanta chilometri vuoi percorrere?');
-console.log(distance);
+var distance = prompt ('Inserisci i chilometri da percorrere');
+document.getElementById('distance').innerHTML = distance + "Km";
 
 var price = distance * 0.21;
 console.log(price);
 
-var under18 =
-
 if (age <= 18 ) {
-    console.log('sconto under 18');
-    console.log(price - (price / 100 * 20));
+    price = price - (price / 100 * 20);
+    document.getElementById('sconto').innerHTML = Math.floor(price)  + ' €';
+} else if (age >= 65 ) {
+    price = price - (price / 100 * 40);
+    document.getElementById('sconto').innerHTML = Math.floor(price) + ' €';
+} else {
+    price;
+    document.getElementById('sconto').innerHTML = Math.floor(price) + ' €';
 }
-
-if (age >= 65 ) {
-    console.log('sconto over 65');
-    console.log(price - (price / 100 * 40));
-}
-
-document.getElementById('sconto').innerHTML = under18;
