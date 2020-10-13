@@ -7,10 +7,7 @@ console.log(distance);
 var price = distance * 0.21;
 console.log(price);
 
-var under18 = if (age <= 18 ) {
-    console.log('sconto under 18');
-    console.log(price - (price / 100 * 20));
-}
+var under18 =
 
 if (age <= 18 ) {
     console.log('sconto under 18');
